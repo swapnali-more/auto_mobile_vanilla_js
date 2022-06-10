@@ -5,7 +5,7 @@ let IsLoggedIn = false;
 
 // Login function
 function Login() {
-    fetch("../js/users.json").then(res => res.json())
+    fetch("./users.json").then(res => res.json())
         .then((data) => {
             data.forEach((result, index) => {
                 if (result.username === user.value) {
@@ -146,18 +146,18 @@ serviceDropdown()
 
 // Booking submit data
 const nameFull = document.getElementById("nameFull");
-    const emailId = document.getElementById("emailId");
-    const phone = document.getElementById("phNo");
-    const selectService = document.getElementById("selectService");
-    const make = document.getElementById("carMake");
-    const model = document.getElementById("carModel");
-    const fuelType = document.getElementById("fuelType");
-    const appointmentDate = document.getElementById("appointmentDate");
-    const address = document.getElementById("address");
-    const formElem = document.getElementById("formElem");
-    
+const emailId = document.getElementById("emailId");
+const phone = document.getElementById("phNo");
+const selectService = document.getElementById("selectService");
+const make = document.getElementById("carMake");
+const model = document.getElementById("carModel");
+const fuelType = document.getElementById("fuelType");
+const appointmentDate = document.getElementById("appointmentDate");
+const address = document.getElementById("address");
+const formElem = document.getElementById("formElem");
 
-formElem.addEventListener("submit", (e)=>{
+
+formElem.addEventListener("submit", (e) => {
     e.preventDefault()
     let formData = new FormData();
     formData.append('name', nameFull.value)
@@ -173,9 +173,9 @@ formElem.addEventListener("submit", (e)=>{
     var bookings = [];
     var obj = {};
 
-    for(let [name, value] of formData) {
+    for (let [name, value] of formData) {
         obj[name] = value;
-        
+
         bookings.push(obj)
     }
 
