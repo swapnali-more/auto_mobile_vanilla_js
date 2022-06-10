@@ -156,47 +156,43 @@ const appointmentDate = document.getElementById("appointmentDate");
 const address = document.getElementById("address");
 const formElem = document.getElementById("formElem");
 
+// formElem.addEventListener("submit", (e) => {
+//     e.preventDefault()
+//     let formData = new FormData();
+//     formData.append('name', nameFull.value)
+//     formData.append('email', emailId.value)
+//     formData.append('phone', phone.value)
+//     formData.append('service', selectService.value)
+//     formData.append('make', make.value)
+//     formData.append('model', model.value)
+//     // formData.append('fuelType', fuelType.value)
+//     formData.append('appointment', appointmentDate.value)
+//     formData.append('address', address.value)
 
-formElem.addEventListener("submit", (e) => {
-    e.preventDefault()
-    let formData = new FormData();
-    formData.append('name', nameFull.value)
-    formData.append('email', emailId.value)
-    formData.append('phone', phone.value)
-    formData.append('service', selectService.value)
-    formData.append('make', make.value)
-    formData.append('model', model.value)
-    // formData.append('fuelType', fuelType.value)
-    formData.append('appointment', appointmentDate.value)
-    formData.append('address', address.value)
+//     var bookings = [];
+//     var obj = {};
 
-    var bookings = [];
-    var obj = {};
+//     for (let [name, value] of formData) {
+//         obj[name] = value;
 
-    for (let [name, value] of formData) {
-        obj[name] = value;
+//         bookings.push(obj)
+//     }
 
-        bookings.push(obj)
-    }
+//     const data = JSON.stringify(bookings)
 
-    const data = JSON.stringify(bookings)
+//     localStorage.setItem("bookings", data)
 
-    localStorage.setItem("bookings", data)
+//     var retrievedPerson = JSON.parse(localStorage.getItem('bookings'))
 
-    var retrievedPerson = JSON.parse(localStorage.getItem('bookings'))
+//     console.log(retrievedPerson)
 
-    console.log(retrievedPerson)
-
-    localStorage.clear();
-})
-
-
+//     localStorage.clear();
+// })
 
 
 // Booking successfull popups
 function bookingSuccess() {
     const getUrl = window.location.pathname.split("html/")
-
     if (getUrl[1] === "booking-success.html") {
         setTimeout(() => {
             prompt('On scale of 1-10, howlikely are you to recommend our website to your friends & family?', 100);
@@ -204,7 +200,6 @@ function bookingSuccess() {
             location.assign("index.html")
         }, 1000)
     }
-
 }
 bookingSuccess()
 
