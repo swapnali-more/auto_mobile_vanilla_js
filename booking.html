@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/booking.css">
+    <title>Booking | AutoMob-Mechanic</title>
+</head>
+
+<body>
+    <header>
+        <b><a href="index.html">AutoMob-Mechanic</a></b>
+        <nav>
+            <span id="name"></span>
+            <a href="index.html">Home</a> |
+            <a href="services.html">Services</a> |
+            <a href="booking.html" class="active">Booking</a> |
+            <a href="#" id="logout" onclick="Logout()">Logout | </a>
+            <a href="mailto:contact@automob.co.in">contact@automob.co.in &#9993;</a> |
+            <a>999-999-9999 &#9743;</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Book Your Service</h2>
+        <form id="formElem">
+            <div>
+                <label for="nameFull">Name:</label>
+                <input type="text" id="nameFull" placeholder="John Daub" required
+                    pattern="^[A-Za-z]{1,}[\s][A-Za-z]{1,}$">
+            </div>
+            <div>
+                <label for="emailId">Email Id:</label>
+                <input type="email" id="emailId" placeholder="john@yahoo.com" required
+                    pattern="[A-z\d\s]{1,}[@][a-z]{1,}(.com)$">
+            </div>
+
+            <div>
+                <label for="phNo">Phone Number:</label>
+                <select id="phNoCode">
+                    <option selected>code</option>
+                    <option>+213</option>
+                    <option>+91</option>
+                    <option>+244</option>
+                    <option>+61</option>
+                </select>
+                <input type="tel" id="phNo" placeholder="9823322332" pattern="[0-9]{10}" required>
+            </div>
+            <div>
+                <label for="selectService">Select Service:</label>
+                <select id="selectService" name="selectService" style="width:43.5%">
+                    <option disabled selected>--Select--</option>
+                    <option value="preventive-maintenance-service">Preventive Maintenance Service</option>
+                    <option value="body-repair-service">Body Repair Service</option>
+                    <option value="car-care-service">Car Care Service</option>
+                </select>
+            </div>
+            <div>
+                <label for="carMake">Car Make:</label>
+                <input type="text" id="carMake" list="carList" placeholder="Suzuki, Toyota...." required>
+                <datalist id="carList">
+                    <option value="Mahindra"></option>
+                    <option value="Maruti and Suzuki"></option>
+                    <option value="Honda"></option>
+                    <option value="Hyundai"></option>
+                    <option value="Ford"></option>
+                    <option value="Toyota"></option>
+                    <option value="Nissan"></option>
+                </datalist>
+            </div>
+            <div>
+                <label for="carModel">Car Model:</label>
+                <input type="text" id="carModel" placeholder="Alto, Innova..." required>
+            </div>
+            <div>
+                <label for="fuelType">Fuel Type:</label>
+                <input type="radio" value="petrol" name="fuelType">Petrol</input>
+                <input type="radio" value="diesel" name="fuelType">Diesel</input>
+                <input type="radio" value="LPG" name="fuelType">LPG</input>
+                <input type="radio" value="others" name="fuelType">Others</input>
+            </div>
+            <div>
+                <label for="appointmentDate">Appointment Date:</label>
+                <input type="date" id="appointmentDate" name="appointmentDate" required>
+                <p id="errorMsg"></p>
+            </div>
+            <div>
+                <label for="address">Address:</label>
+                <textarea id="address" cols="50" rows="4"></textarea>
+            </div>
+            <div>
+                <button type="submit" id="submit">Book</button>
+            </div>
+            <br><br>
+        </form>
+    </main>
+
+    <footer>
+        <span>Copyright &copy; 2020 AutoMob-Mechanic.</span>&nbsp;
+        <span>All Rights Reserved.</span>
+    </footer>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

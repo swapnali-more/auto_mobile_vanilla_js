@@ -1,0 +1,30 @@
+#datas {
+    
+    border-collapse: collapse;
+    width: 80%;
+    margin-top: 3%;
+    margin-left: 10%;
+  }
+  
+  #datas th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    font-weight: 900;
+  }
+
+  #datas td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #datas tr:nth-child(odd){background-color: rgb(177, 196, 233);}
+  
+
+  
+  #datas th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: cornflowerblue;
+    color: white;
+  }
