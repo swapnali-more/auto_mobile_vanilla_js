@@ -5,7 +5,7 @@ let IsLoggedIn = false;
 
 // Login function
 function Login() {
-    fetch("../js/users.json").then(res => res.json())
+    fetch("./js/users.json").then(res => res.json())
         .then((data) => {
             data.forEach((result, index) => {
                 if (result.username === user.value) {
